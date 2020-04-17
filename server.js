@@ -61,6 +61,16 @@ con.connect(err => {
     console.log(err);
   } else {
     console.log("Database Connected");
+    con.query("CREATE DATABASE IF NOT EXISTS admin",(result,err)=>{
+      if(!err){
+        console.log("Admin database created");
+      }
+    })
+    con.query("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100) NOT NULL, email VARCHAR(255) NOT NULL,password VARCHAR(200) NOT NULL,sid VARCHAR(200),api VARCHAR(200))",(result,err)=>{
+      if(!err){
+        console.log("users table created");
+      }
+    })
   }
 });
 
