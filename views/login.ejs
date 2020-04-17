@@ -1,0 +1,42 @@
+<%- include('../include/header'); -%>
+
+<body>
+    <%- include('../include/nav'); -%>
+
+    <div class="container">
+
+        <div class="box">
+            <form action="/login" method="post">
+                <p class="tl">LOGIN</p>
+                <div class="fields">
+
+                    <input type="email" name="email" placeholder="Enter email" id=""><br>
+                    <input type="password" name="password" placeholder="Enter password" id=""><br>
+                    <button type="submit">Login</button>
+
+                </div>
+            </form>
+            <% if (locals.errors) { %>
+            <div class="error" id="error">
+
+                <p class="delete" onclick="<%= del %>">x</p>
+                <ul>
+                    <% Object.values(errors).forEach(function(error){ %>
+                    <li><%= error.msg %></li>
+                    <% }); %>
+
+                </ul>
+            </div>
+            <% } %>
+
+            <% if ( locals.expressFlash.length > 0 ) { %>
+            <p><strong>FLASH!</strong> <%= expressFlash %></p>
+            <% } %>
+        </div>
+
+    </div>
+    <%- include('../include/footer'); -%>
+
+</body>
+
+</html>
