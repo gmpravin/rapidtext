@@ -1,6 +1,6 @@
 # Rapidtext Open source web app using node.js and twilio
-![Logo](https://raw.githubusercontent.com/gmpravin/twilio-example-nodejs/master/logo.png)
-[![powered by twilio](https://raw.githubusercontent.com/gmpravin/twilio-example-nodejs/master/twilio-badge-clear.svg)]()
+![Logo](https://raw.githubusercontent.com/gmpravin/rapidtext/master/logo.png)
+![powered by twilio](https://raw.githubusercontent.com/gmpravin/rapidtext/master/twilio-badge-clear.svg)
 
 # About
  Rapidtext is a web application used to send a sms/bulk sms using twilio api
@@ -43,6 +43,7 @@ RapidText uses a number of open source projects to work properly:
 # Requirements
 
     - Node.js
+    - Mysql
     - A Twilio account - sign up
 # Twilio Account Settings
 
